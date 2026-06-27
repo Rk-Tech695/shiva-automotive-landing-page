@@ -125,7 +125,7 @@ export default function Home() {
               marginBottom: 20,
             }}
           >
-            Indore's Trusted Auto Workshop
+            BAGBAHARA'S Trusted Auto Workshop
           </p>
 
           <h1

@@ -35,7 +35,7 @@ export default function Footer() {
 
           <p style={{ lineHeight: "30px" }}>
             Trusted Automotive Workshop in
-            Indore.
+            Bagbahara,Chhattisgarh.
           </p>
         </div>
 
@@ -110,9 +110,9 @@ export default function Footer() {
             Contact
           </h3>
 
-          <p>📍 Indore, MP</p>
+          <p>📍 Plot Khasra No. 92, Village Khopli NH-353, Bhawanipatna - Raipur Hwy, Bagbahara, Chhattisgarh 493449</p>
 
-          <p>📞 +91-XXXXXXXXXX</p>
+          <p>📞 +91-8518071111</p>
 
           <p>
             ✉️

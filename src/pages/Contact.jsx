@@ -127,11 +127,11 @@ export default function Contact() {
           <div style={{ lineHeight: 2.2 }}>
 
             <p>
-              📍 Indore, Madhya Pradesh
+              📍 Plot Khasra No. 92, Village Khopli NH-353, Bhawanipatna - Raipur Hwy, Bagbahara, Chhattisgarh 493449
             </p>
 
             <p>
-              📞 +91 XXXXX XXXXX
+              📞 +91 8518071111
             </p>
 
             <p>
@@ -145,19 +145,24 @@ export default function Contact() {
           </div>
 
           <div
-            style={{
-              marginTop: 35,
-              height: 250,
-              borderRadius: 8,
-              background: COLORS.lightgray,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: COLORS.midgray,
-            }}
-          >
-            Google Map Here
-          </div>
+  style={{
+    marginTop: 35,
+    height: 250,
+    borderRadius: 8,
+    overflow: "hidden",
+  }}
+>
+  <iframe
+    title="Shiva Automotive Location"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.123!2d82.4297391!3d21.0178484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a26095e8146dbed%3A0xc96ed4e01c4fda11!2sShiva%20Automotive%20Ashok%20Leyland%20Dealership%20Service%20And%20Spares!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    style={{ border: 0, display: "block" }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
 
         </div>
 

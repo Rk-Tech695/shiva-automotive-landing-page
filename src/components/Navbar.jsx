@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import COLORS from "../styles/colors";
+import logo from "../assets/hero.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -64,20 +65,39 @@ export default function Navbar() {
           }}
         >
           <Link
-            to="/"
-            style={{
-              fontSize: "28px",
-              color: "#fff",
-              fontWeight: "700",
-              fontFamily: "Oswald",
-            }}
-          >
-            SHIVA{" "}
-            <span style={{ color: COLORS.orange }}>
-              AUTO
-            </span>
-            MOTIVE
-          </Link>
+  to="/"
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "12px",
+    textDecoration: "none",
+  }}
+>
+  <img
+    src={logo}
+    alt="Shiva Automotive"
+    style={{
+      width: "55px",
+      height: "55px",
+      objectFit: "contain",
+    }}
+  />
+
+  <span
+    style={{
+      fontSize: "28px",
+      color: "#fff",
+      fontWeight: "700",
+      fontFamily: "Oswald",
+    }}
+  >
+    SHIVA{" "}
+    <span style={{ color: COLORS.orange }}>
+      AUTO
+    </span>
+    MOTIVE
+  </span>
+</Link>
 
           <div
             className="desktop-menu"
