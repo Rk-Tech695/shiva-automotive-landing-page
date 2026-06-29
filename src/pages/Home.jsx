@@ -6,7 +6,8 @@ import useScrollReveal from "../hooks/useScrollReveal";
 import SectionHeading from "../components/SectionHeading";
 import SectionLabel from "../components/SectionLabel";
 import PistonDivider from "../components/PistonDivider";
-
+import workshopFront from "../assets/workshop1.jpeg";
+import workshopGate from "../assets/workshop2.jpeg";
 export default function Home() {
   const navigate = useNavigate();
 
@@ -36,31 +37,32 @@ export default function Home() {
   const features = [
     {
       icon: "🔧",
-      title: "Expert Technicians",
+      title: "Ashok Leyland Certified Technicians",
       desc:
         "Certified mechanics with 10+ years of experience across all vehicle brands.",
     },
     {
       icon: "⚡",
-      title: "Quick Turnaround",
+      title: "Fast Vehicle Delivery",
       desc:
         "Fast servicing so your vehicle gets back on the road quickly.",
     },
     {
       icon: "🛡️",
-      title: "Quality Guaranteed",
+      title: "Genuine Leyparts",
       desc:
         "Every repair is backed by our service warranty.",
     },
     {
       icon: "💰",
-      title: "Transparent Pricing",
+      title: "Transparent Billing",
       desc:
         "No hidden charges. Clear estimates before work starts.",
     },
   ];
 
   return (
+    
     <div>
 
       {/* ================= HERO ================= */}
@@ -68,12 +70,14 @@ export default function Home() {
       <section
         style={{
           position: "relative",
-          height: "100vh",
-          minHeight: 560,
+          minHeight:"750px",
+          paddingTop:"100px",
+          paddingBottom:"80px",
           display: "flex",
           alignItems: "center",
           overflow: "hidden",
-          background: COLORS.dark,
+          background: "#fff",
+          backgroundImage:"linear-gradient(to bottom,#ffffff,#f8fafc)"
         }}
       >
 
@@ -83,14 +87,14 @@ export default function Home() {
             position: "absolute",
             inset: 0,
             backgroundImage: `
-            repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 40px,
-            rgba(232,83,10,.04) 40px,
-            rgba(232,83,10,.04) 41px
-            )
-          `,
+repeating-linear-gradient(
+45deg,
+transparent,
+transparent 40px,
+rgba(0,0,0,.03) 40px,
+rgba(0,0,0,.03) 41px
+)
+`,
             willChange: "transform",
           }}
         />
@@ -101,7 +105,7 @@ export default function Home() {
             left: 0,
             top: 0,
             bottom: 0,
-            width: 6,
+            width: 8,
             background: COLORS.orange,
           }}
         />
@@ -109,13 +113,17 @@ export default function Home() {
         <div
           style={{
             position: "relative",
-            maxWidth: 1200,
+            maxWidth: "1200px",
             margin: "0 auto",
             padding: "0 32px",
-            width: "100%",
+            display: "grid",
+            gridTemplateColumns: "1.1fr .9fr",
+            alignItems: "center",
+            gap: "60px",
           }}
         >
-          <p
+          <div>
+            <p
             style={{
               fontFamily: "'Oswald',sans-serif",
               fontSize: ".85rem",
@@ -129,43 +137,65 @@ export default function Home() {
           </p>
 
           <h1
-            style={{
-              fontFamily: "'Oswald',sans-serif",
-              fontWeight: 700,
-              fontSize: "clamp(2.8rem,8vw,6rem)",
-              color: COLORS.offwhite,
-              lineHeight: 1,
-              marginBottom: 28,
-            }}
-          >
-            SHIVA
-            <br />
-            <span style={{ color: COLORS.orange }}>
-              AUTO
-            </span>
-            MOTIVE
-          </h1>
+  style={{
+    fontFamily: "'Oswald', sans-serif",
+    fontWeight: 700,
+    fontSize: "clamp(3rem,8vw,6rem)",
+    lineHeight: 1.05,
+    marginBottom: 28,
+  }}
+>
+  <span style={{ color: COLORS.orange }}>
+    SHIVA
+  </span>
+
+  <br />
+
+  <span style={{ color: COLORS.blue }}>
+    AUTOMOTIVE
+  </span>
+</h1>
+<div
+className="hero-grid"
+  style={{
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "10px",
+    padding: "10px 18px",
+    background: "#F8FAFC",
+    border: "1px solid #E5E7EB",
+    borderRadius: "30px",
+    marginBottom: "25px",
+    fontWeight: "600",
+    color: "#334155",
+    boxShadow: "0 5px 15px rgba(0,0,0,.06)",
+  }}
+>
+  ✅ Ashok Leyland Authorized Service Partner
+</div>
 
           <p
             style={{
-              color: COLORS.silver,
+              color: "#475569",
               fontSize: "1.1rem",
-              maxWidth: 520,
+              maxWidth: "600px",
               lineHeight: 1.7,
               marginBottom: 40,
             }}
           >
-            Complete vehicle care — from routine
-            maintenance to engine repair,
-            diagnostics, AC service,
-            wheel alignment and genuine
-            spare parts.
+            Ashok Leyland Authorized Service &
+            Spare Parts Center providing
+            complete commercial vehicle
+            maintenance, diagnostics,
+            engine repair, wheel alignment,
+            genuine Leyparts and expert
+            after-sales support.
           </p>
 
           <div
             style={{
               display: "flex",
-              gap: 16,
+              gap: "20px",
               flexWrap: "wrap",
             }}
           >
@@ -180,9 +210,52 @@ export default function Home() {
               className="btn-outline"
               onClick={() => navigate("/services")}
             >
-              Our Services
+             Explore Services →
             </button>
           </div>
+          </div>
+          <div className="hero-images"
+  style={{
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "520px",
+  }}
+>
+  {/* Main Workshop Image */}
+  <img
+    src={workshopFront}
+    alt="Shiva Automotive Workshop"
+    style={{
+      width: "100%",
+      maxWidth: "560px",
+      height: "430px",
+      borderRadius: "20px",
+      boxShadow: "0 25px 60px rgba(0,0,0,.18)",
+      objectFit: "cover",
+      border:"8px solid white",
+    }}
+  />
+
+  {/* Floating Image */}
+  <img
+    src={workshopGate}
+    alt="Workshop Entrance"
+    style={{
+      position: "absolute",
+      width: "260px",
+      height: "170px",
+      right: "-30px",
+      bottom: "-30px",
+      borderRadius: "16px",
+      border: "6px solid white",
+      boxShadow: "0 20px 45px rgba(0,0,0,.18)",
+      objectFit: "cover",
+      background:"#fff",
+    }}
+  />
+</div>
         </div>
 
         <div
@@ -195,7 +268,7 @@ export default function Home() {
             flexDirection: "column",
             alignItems: "center",
             gap: 8,
-            color: COLORS.silver,
+            color:"#475569",
           }}
         >
           <div
@@ -215,7 +288,9 @@ export default function Home() {
 
       <section
         style={{
-          background: COLORS.orange,
+          background: "#F8FAFC",
+          borderTop:"1px solid #E5E7EB",
+          borderBottom:"1px solid #E5E7EB",
           padding: "48px 32px",
         }}
       >
@@ -231,7 +306,7 @@ export default function Home() {
         >
           {[
             {
-              num: "10+",
+              num: "6+",
               label: "Years in Business",
               ref: stat1,
             },
@@ -251,22 +326,25 @@ export default function Home() {
               ref={item.ref}
               className="reveal"
               style={{
-                textAlign: "center",
-                color: "#fff",
-              }}
+background:"#fff",
+padding:"30px",
+borderRadius:"16px",
+boxShadow:"0 8px 25px rgba(0,0,0,.08)",
+textAlign:"center"
+}}
             >
               <p
                 style={{
-                  fontFamily:
-                    "'Oswald',sans-serif",
-                  fontSize: "2.8rem",
-                  fontWeight: 700,
+                fontFamily:"Oswald",
+                fontSize:"2.8rem",
+                fontWeight:700,
+                color:COLORS.orange
                 }}
               >
                 {item.num}
               </p>
 
-              <p>{item.label}</p>
+              <p style={{color:"#64748B"}}>{item.label}</p>
             </div>
           ))}
         </div>
@@ -305,8 +383,13 @@ export default function Home() {
               key={item.title}
               className="service-card"
               style={{
-                padding: "30px 25px",
-              }}
+                      background:"#fff",
+                      border:"1px solid #E5E7EB",
+                      borderRadius:"16px",
+                      padding:"30px",
+                      boxShadow:"0 10px 25px rgba(0,0,0,.06)",
+                      transition:".3s"
+                    }}
             >
               <div
                 style={{
@@ -331,7 +414,7 @@ export default function Home() {
 
               <p
                 style={{
-                  color: COLORS.midgray,
+                  color:"#64748B",
                   lineHeight: 1.7,
                 }}
               >
@@ -346,9 +429,10 @@ export default function Home() {
 
       <section
         style={{
-          background: COLORS.dark,
+          background: "#1E3A6A",
           padding: "90px 32px",
           textAlign: "center",
+          backgroundImage:"linear-gradient(135deg,#1E3A8A,#2563EB)"
         }}
       >
         <SectionLabel>
@@ -363,7 +447,7 @@ export default function Home() {
 
         <p
           style={{
-            color: COLORS.silver,
+            color:"#E2E8F0",
             maxWidth: 700,
             margin: "0 auto 35px",
             lineHeight: 1.8,

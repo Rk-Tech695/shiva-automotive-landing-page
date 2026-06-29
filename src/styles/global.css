@@ -16,8 +16,8 @@ html{
 
 body{
     font-family:'Inter',sans-serif;
-    background:#1A1A2E;
-    color:#fff;
+    background:#ffffff;
+    color:#111827;
     overflow-x:hidden;
 }
 
@@ -272,15 +272,25 @@ padding-right:25px !important;
 
 @media (max-width:768px){
 
+/* Desktop */
 .desktop-menu{
-
-display:none !important;
-
+    display:flex;
 }
 
 .mobile-btn{
+    display:none !important;
+}
 
-display:block !important;
+/* Tablet + Mobile */
+@media (max-width:768px){
+
+.desktop-menu{
+    display:none !important;
+}
+
+.mobile-btn{
+    display:block !important;
+}
 
 }
 
@@ -353,4 +363,38 @@ font-size:15px;
 
 }
 
+}
+@media(max-width:900px){
+
+.hero-grid{
+display:flex !important;
+flex-direction:column;
+gap:50px !important;
+}
+
+.hero-images{
+margin-top:20px;
+}
+
+.hero-images img:first-child{
+max-width:100% !important;
+height:auto !important;
+}
+
+.hero-images img:last-child{
+width:170px !important;
+height:110px !important;
+right:0 !important;
+bottom:-15px !important;
+}
+
+}
+.footer-link{
+    color:#CBD5E1;
+    transition:.3s;
+}
+
+.footer-link:hover{
+    color:#F68B2C;
+    padding-left:6px;
 }

@@ -5,10 +5,52 @@ import SectionHeading from "../components/SectionHeading";
 import SectionLabel from "../components/SectionLabel";
 import PistonDivider from "../components/PistonDivider";
 import useScrollReveal from "../hooks/useScrollReveal";
+import clutch from "../assets/clutch.jpg";
+import airFilter from "../assets/air-filter.jpg";
+import piston from "../assets/piste-set.jpg";
+import gears from "../assets/gears-thumb.jpg";
+import oil from "../assets/oil-fuel-filter.jpg";
+import crown from "../assets/crown-wheel.jpg";
+import bearings from "../assets/bearings-thump.jpg";
+import brake from "../assets/break-lining.jpg";
 
 export default function Services() {
 
   const navigate = useNavigate();
+  const leyparts = [
+  {
+    image: clutch,
+    title: "Clutch Disc",
+  },
+  {
+    image: airFilter,
+    title: "Air Filter",
+  },
+  {
+    image: piston,
+    title: "Piston Set",
+  },
+  {
+    image: gears,
+    title: "Gears & Shafts",
+  },
+  {
+    image: oil,
+    title: "Oil & Fuel Filters",
+  },
+  {
+    image: crown,
+    title: "Crown Wheel Pinion",
+  },
+  {
+    image: bearings,
+    title: "Bearings",
+  },
+  {
+    image: brake,
+    title: "Brake Lining",
+  },
+];
 
   const services = [
     {
@@ -60,7 +102,7 @@ export default function Services() {
 
       <section
         style={{
-          background: COLORS.dark,
+          background:"#fff",
           padding: "120px 32px 90px",
           position: "relative",
         }}
@@ -208,51 +250,53 @@ export default function Services() {
           </SectionLabel>
 
           <SectionHeading>
-            Quality Parts &
-            <br />
-            Accessories
+             Leyparts Genuine Spare Parts
           </SectionHeading>
 
           <PistonDivider />
 
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns:
-                "repeat(auto-fit,minmax(220px,1fr))",
-              gap: 25,
-              marginTop: 40,
-            }}
-          >
-            {[
-              "Engine Oil",
-              "Car Battery",
-              "Tyres",
-              "Brake Pads",
-              "Air Filters",
-              "Oil Filters",
-              "Coolant",
-              "Car Accessories",
-            ].map((item) => (
-              <div
-                key={item}
-                className="service-card"
-                style={{
-                  padding: 25,
-                  textAlign: "center",
-                }}
-              >
-                <h3
-                  style={{
-                    fontFamily: "'Oswald',sans-serif",
-                    color: COLORS.dark,
-                  }}
-                >
-                  {item}
-                </h3>
-              </div>
-            ))}
-          </div>
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+    gap: "25px",
+    marginTop: "40px",
+  }}
+>
+  {leyparts.map((item) => (
+    <div
+      key={item.title}
+      className="service-card"
+      style={{
+        overflow: "hidden",
+        padding: "0",
+        background: "#fff",
+      }}
+    >
+      <img
+        src={item.image}
+        alt={item.title}
+        style={{
+          width: "100%",
+          height: "220px",
+          objectFit: "contain",
+          padding: "20px",
+        }}
+      />
+
+      <h3
+        style={{
+          padding: "18px",
+          textAlign: "center",
+          fontFamily: "Oswald",
+          color: "#111827",
+        }}
+      >
+        {item.title}
+      </h3>
+    </div>
+  ))}
+</div>
         </div>
       </section>
 

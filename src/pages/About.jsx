@@ -11,22 +11,22 @@ export default function About() {
 
   const timeline = [
     {
-      year: "2012",
+      year: "2020",
       title: "Company Started",
       desc: "Shiva Automotive started with a vision to provide honest and reliable vehicle servicing."
     },
     {
-      year: "2016",
+      year: "2022",
       title: "Workshop Expansion",
       desc: "Expanded our workshop with advanced diagnostic machines and skilled technicians."
     },
     {
-      year: "2020",
+      year: "2025",
       title: "5000+ Happy Customers",
       desc: "Successfully serviced thousands of vehicles with customer-first service."
     },
     {
-      year: "2025",
+      year: "2026",
       title: "Modern Automotive Center",
       desc: "Providing complete multi-brand automotive repair and maintenance solutions."
     }
@@ -39,7 +39,7 @@ export default function About() {
 
       <section
         style={{
-          background: COLORS.dark,
+          background:"#fff",
           padding: "160px 32px 90px",
           position: "relative",
           overflow: "hidden",
@@ -260,7 +260,7 @@ export default function About() {
 
       <section
         style={{
-          background: COLORS.lightgray,
+          background: "#fff",
           padding: "90px 32px",
         }}
       >

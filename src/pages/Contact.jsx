@@ -47,7 +47,7 @@ export default function Contact() {
 
       <section
         style={{
-          background: COLORS.dark,
+          background:"#fff",
           padding: "120px 32px 90px",
           position: "relative",
         }}
@@ -76,7 +76,7 @@ export default function Contact() {
           <h1
             style={{
               fontFamily: "'Oswald',sans-serif",
-              color: COLORS.offwhite,
+              color: COLORS.dark,
               fontSize: "clamp(2.5rem,5vw,4rem)",
             }}
           >
@@ -124,45 +124,68 @@ export default function Contact() {
 
           <PistonDivider />
 
-          <div style={{ lineHeight: 2.2 }}>
+          <div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "18px",
+    marginTop: "25px",
+  }}
+>
 
-            <p>
-              📍 Plot Khasra No. 92, Village Khopli NH-353, Bhawanipatna - Raipur Hwy, Bagbahara, Chhattisgarh 493449
-            </p>
+           <div className="service-card">
+  <strong>📍 Workshop Address</strong>
 
-            <p>
-              📞 +91 8518071111
-            </p>
+  <p style={{ marginTop: 10 }}>
+    Plot Khasra No. 92,
+    <br />
+    Village Khopli NH-353,
+    <br />
+    Bagbahara,
+    <br />
+    Chhattisgarh - 493449
+  </p>
+</div>
 
-            <p>
-              ✉ info@shivaautomotive.in
-            </p>
+            <div className="service-card">
+  <strong>📞 Workshop Manager</strong>
 
-            <p>
-              🕒 Mon - Sat : 9 AM - 7 PM
-            </p>
+  <p style={{ marginTop: 10 }}>
+    +91 8518031111
+  </p>
+</div>
+
+<div className="service-card">
+  <strong>📞 Floor Supervisor</strong>
+
+  <p style={{ marginTop: 10 }}>
+    +91 8518091111
+  </p>
+</div>
+
+            <div className="service-card">
+  <strong>✉ Email</strong>
+
+  <p style={{ marginTop: 10 }}>
+    automotive.shiva@gmail.com
+    <br />
+    service@shivaautomotive.in
+  </p>
+</div>
+
+            <div className="service-card">
+  <strong>🕒 Working Hours</strong>
+
+  <p style={{ marginTop: 10 }}>
+    Monday – Saturday
+    <br />
+    9:00 AM – 7:00 PM
+  </p>
+</div>
 
           </div>
 
-          <div
-  style={{
-    marginTop: 35,
-    height: 250,
-    borderRadius: 8,
-    overflow: "hidden",
-  }}
->
-  <iframe
-    title="Shiva Automotive Location"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.123!2d82.4297391!3d21.0178484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a26095e8146dbed%3A0xc96ed4e01c4fda11!2sShiva%20Automotive%20Ashok%20Leyland%20Dealership%20Service%20And%20Spares!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-    width="100%"
-    height="100%"
-    style={{ border: 0, display: "block" }}
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  />
-</div>
+          
 
         </div>
 
@@ -178,9 +201,9 @@ export default function Contact() {
           </SectionLabel>
 
           <SectionHeading>
-            Book An
+            Schedule Your
             <br />
-            Appointment
+            Service
           </SectionHeading>
 
           <PistonDivider />
@@ -227,25 +250,15 @@ export default function Contact() {
                 Select Service
               </option>
 
-              <option>
-                Engine Repair
-              </option>
+              <option>Periodic Maintenance</option>
 
-              <option>
-                AC Service
-              </option>
+              <option>Genuine Leyparts</option>
 
-              <option>
-                Oil Change
-              </option>
+              <option>Vehicle Inspection</option>
 
-              <option>
-                Wheel Alignment
-              </option>
+              <option>Body Repair</option>
 
-              <option>
-                Brake Service
-              </option>
+              <option>Insurance Claim</option>
 
             </select>
 
@@ -261,7 +274,7 @@ export default function Contact() {
               className="btn-primary"
               type="submit"
             >
-              Send Message →
+              Book Appointment →
             </button>
 
           </form>
@@ -270,7 +283,51 @@ export default function Contact() {
 
       </section>
 
-    </div>
+{/* ================= GOOGLE MAP ================= */}
+
+<section
+  style={{
+    maxWidth: "1200px",
+    margin: "0 auto 90px",
+    padding: "0 32px",
+  }}
+>
+  <SectionLabel>
+    Find Us
+  </SectionLabel>
+
+  <SectionHeading>
+    Visit Our Workshop
+  </SectionHeading>
+
+  <PistonDivider />
+
+  <div
+    style={{
+      height: "320px",
+      borderRadius: "20px",
+      overflow: "hidden",
+      border: "1px solid #E5E7EB",
+      boxShadow: "0 15px 40px rgba(0,0,0,.12)",
+    }}
+  >
+    <iframe
+      title="Shiva Automotive Location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.123!2d82.4297391!3d21.0178484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a26095e8146dbed%3A0xc96ed4e01c4fda11!2sShiva%20Automotive%20Ashok%20Leyland%20Dealership%20Service%20And%20Spares!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+      width="100%"
+      height="100%"
+      style={{
+        border: 0,
+      }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    />
+  </div>
+</section>
+
+</div>
+    
   );
 
 }

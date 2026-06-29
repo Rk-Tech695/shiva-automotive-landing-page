@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import COLORS from "../styles/colors";
-import logo from "../assets/hero.png";
+import logo from "../assets/Shiva Automotive.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -45,7 +45,10 @@ export default function Navbar() {
           left: 0,
           right: 0,
           zIndex: 999,
-          background: scrolled ? "rgba(26,26,46,.96)" : COLORS.dark,
+          background: "#fff",
+boxShadow: scrolled
+  ? "0 8px 25px rgba(0,0,0,.08)"
+  : "0 2px 10px rgba(0,0,0,.04)",
           backdropFilter: "blur(10px)",
           transition: ".3s",
           borderBottom: scrolled
@@ -73,7 +76,7 @@ export default function Navbar() {
     textDecoration: "none",
   }}
 >
-  <img
+  {/* <img
     src={logo}
     alt="Shiva Automotive"
     style={{
@@ -96,7 +99,16 @@ export default function Navbar() {
       AUTO
     </span>
     MOTIVE
-  </span>
+  </span> */}
+  <img
+  src={logo}
+  alt="Shiva Automotive"
+  style={{
+    width:"clamp(170px,20vw,240px)",     // Desktop size
+    height: "auto",
+    objectFit: "contain",
+  }}
+/>
 </Link>
 
           <div
@@ -113,9 +125,10 @@ export default function Navbar() {
                 to={item.path}
                 style={{
                   color:
-                    location.pathname == item.path
-                      ? COLORS.orange
-                      : "#fff",
+location.pathname === item.path
+? COLORS.orange
+: "#334155",
+fontWeight:600,
                   fontFamily: "Oswald",
                   letterSpacing: "1px",
                 }}
@@ -141,8 +154,8 @@ export default function Navbar() {
   onClick={() => setMenuOpen(!menuOpen)}
   className="mobile-btn"
   style={{
-    display: "block",
-    color: "#fff",
+    display: "none",
+    color: "#334155",
     fontSize: "34px",
     background: "transparent",
     border: "none",
@@ -174,7 +187,7 @@ export default function Navbar() {
     right: menuOpen ? 0 : "-300px",
     width: "280px",
     height: "100vh",
-    background: COLORS.dark,
+    background: "#fff",
     transition: "right .35s ease",
     zIndex: 9999,
     display: "flex",
@@ -213,12 +226,13 @@ export default function Navbar() {
       onClick={() => setMenuOpen(false)}
       style={{
         color:
-          location.pathname === item.path
-            ? COLORS.orange
-            : "#fff",
+location.pathname === item.path
+? COLORS.orange
+: "#334155",
+fontWeight:600,
         fontSize: "22px",
         padding: "15px 0",
-        borderBottom: "1px solid rgba(255,255,255,.08)",
+        borderBottom: "1px solid #E5E7EB",
         fontFamily: "Oswald",
       }}
     >

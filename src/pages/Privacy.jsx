@@ -11,7 +11,7 @@ export default function Privacy() {
 
       <section
         style={{
-          background: COLORS.dark,
+          background:"#fff",
           padding: "120px 32px 90px",
           position: "relative",
         }}
