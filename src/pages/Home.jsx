@@ -6,8 +6,8 @@ import useScrollReveal from "../hooks/useScrollReveal";
 import SectionHeading from "../components/SectionHeading";
 import SectionLabel from "../components/SectionLabel";
 import PistonDivider from "../components/PistonDivider";
-import workshopFront from "../assets/workshop1.jpeg";
-import workshopGate from "../assets/workshop2.jpeg";
+import workshopFront from "../assets/Workshop1.jpeg";
+import workshopGate from "../assets/Workshop2.jpeg";
 export default function Home() {
   const navigate = useNavigate();
 
